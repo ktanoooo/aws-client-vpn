@@ -54,12 +54,13 @@ aws acm import-certificate --certificate fileb://sample-vpn-client1.domain.tld.c
   - ルートテーブル 0.0.0.0/0(private-subnet)追加
 
 CIDR参考
+
 ※ クライアントVPNエンドポイントは被らないように
 
-vpc 172.19.0.0/16
-public-subnet 172.19.0.0/21
-private-subnet 172.19.16.0/21
-クライアントVPNエンドポイント 172.19.32.0/21
+- vpc 172.19.0.0/16
+- public-subnet 172.19.0.0/21
+- private-subnet 172.19.16.0/21
+- クライアントVPNエンドポイント 172.19.32.0/21
 ## ovpnファイルの作成
 
 作成したクライアントVPNエンドポイントからクライアント設定`**.ovpn`をダウンロード
