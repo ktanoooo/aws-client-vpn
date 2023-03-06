@@ -29,7 +29,7 @@ cd ~/sample-vpn
 
 # ACMに登録
 aws acm import-certificate --certificate fileb://sample-vpn-server.crt --private-key fileb://sample-vpn-server.key --certificate-chain fileb://ca.crt
-aws acm import -certificate--certificate fileb://sample-vpn-client1.domain.tld.crt --private-key fileb://sample-vpn-client1.domain.tld.key --certificate-chain fileb://ca.crt
+aws acm import-certificate --certificate fileb://sample-vpn-client1.domain.tld.crt --private-key fileb://sample-vpn-client1.domain.tld.key --certificate-chain fileb://ca.crt
 ```
 
 # AWS構成
