@@ -53,6 +53,13 @@ aws acm import-certificate --certificate fileb://sample-vpn-client1.domain.tld.c
   - 承認ルール 0.0.0.0/0追加
   - ルートテーブル 0.0.0.0/0(private-subnet)追加
 
+CIDR参考
+※ クライアントVPNエンドポイントは被らないように
+
+vpc 172.19.0.0/16
+public-subnet 172.19.0.0/21
+private-subnet 172.19.16.0/21
+クライアントVPNエンドポイント 172.19.32.0/21
 # ovpnファイルの作成
 
 作成したクライアントVPNエンドポイントからクライアント設定`**.ovpn`をダウンロード
@@ -87,3 +94,8 @@ https://docs.aws.amazon.com/ja_jp/vpn/latest/clientvpn-user/windows.html
   - https://openvpn.net/community-downloads/
 - Tunnelblick for macOS
   - https://docs.aws.amazon.com/ja_jp/vpn/latest/clientvpn-user/macos.html
+
+
+# Ref
+
+https://hotatekun.hatenablog.com/entry/2022/09/19/204549
